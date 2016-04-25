@@ -74,7 +74,7 @@ map.on('locationfound', function(e) {
         properties: {
             "title": 'Here I Am',
             "marker-color": '#ff8888',
-            "marker-symbol": 'car'
+            "marker-symbol": 'smiley face'
         }
     });
 
