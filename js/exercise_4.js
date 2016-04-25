@@ -17,6 +17,7 @@ map.setView([39, -96], 4);
 
 // Great, now we have a basic web map!
 
+//pulling in data and setting symbology
 var datafiletoadd = 'data/parks.geojson';
 
 var featureLayer = L.mapbox.featureLayer(); 
@@ -33,6 +34,7 @@ featureLayer.on('ready', function (){
   map.fitBounds(featureLayer.getBounds());
 })
 
+//adding a pop-up window on side of frame
 var clickHandler = function(e){
   $('#info').empty();
 
@@ -49,7 +51,7 @@ var clickHandler = function(e){
     $('#info').append(info);
   });
 };
-
+//adding location point of instrument
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
     layer.on('click', clickHandler);
@@ -72,7 +74,7 @@ map.on('locationfound', function(e) {
         properties: {
             "title": 'Here I Am',
             "marker-color": '#ff8888',
-            "marker-symbol": 'star'
+            "marker-symbol": 'person'
         }
     });
 
