@@ -19,9 +19,9 @@ map.setView([39, -96], 4);
 
 var datafiletoadd = 'data/parks.geojson';
 
-var featureLayer = L.mapbox.featureLayer() 
-	featureLayer.loadURL(datafiletoadd)
-    featureLayer.addTo(map)
+var featureLayer = L.mapbox.featureLayer(); 
+	featureLayer.loadURL(datafiletoadd);
+    featureLayer.addTo(map);
     
 featureLayer.on('ready', function (){
   this.setStyle({
@@ -31,5 +31,5 @@ featureLayer.on('ready', function (){
     "opacity": 0.65
  })
   
-map.fitbounds(featureLayer.getBounds()};
- )}
+map.fitbounds(featureLayer.getBounds());
+})
