@@ -33,12 +33,6 @@ featureLayer.on('ready', function (){
   map.fitBounds(featureLayer.getBounds());
 })
 
-featureLayer.on('ready', function(){
-  this.eachLayer(function(layer){
-    layer.bindPopup('Welcome to ' + layer.feature.properties.LABEL);
-  })
-})
-
 var clickHandler = function(e){
   $('#info').empty();
 
@@ -50,7 +44,7 @@ var clickHandler = function(e){
     info += '<div>'
     info +=   '<h2>' + feature.properties.LABEL + '</h2>'
     info +=   '<p>'  + feature.properties.LOCATION + '</p>'
-    info += '</div>'
+    info += '</div>';
 
     $('#info').append(info);
   });
