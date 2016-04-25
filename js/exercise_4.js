@@ -19,9 +19,9 @@ map.setView([39, -96], 4);
 
 var datafiletoadd = 'data/parks.geojson';
 
-var featurelayer = L.mapbox.featureLayer() 
-	featurelayer.loadURL(datafiletoadd)
-    featurelayer.addTo(map)
+var featureLayer = L.mapbox.featureLayer() 
+	featureLayer.loadURL(datafiletoadd)
+    featureLayer.addTo(map)
     
 featureLayer.on('ready', function (){
   this.setStyle({
